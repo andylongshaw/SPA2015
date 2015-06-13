@@ -13,3 +13,4 @@ EOF
 
 sudo /opt/lampp/lampp restart
 
+ifconfig eth1 | grep 'inet addr:'
