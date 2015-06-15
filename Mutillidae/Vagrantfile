@@ -33,6 +33,8 @@ Vagrant.configure(2) do |config|
   # your network.
   config.vm.network "public_network"
 
+  config.vm.hostname = "spa2015owasp"
+
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
@@ -53,6 +55,9 @@ Vagrant.configure(2) do |config|
   #
   # View the documentation for the provider you are using for more
   # information on available options.
+  config.vm.provider :virtualbox do |vb|
+      vb.name = "SPA2015_OWASP"
+  end
 
   # Define a Vagrant Push strategy for pushing to Atlas. Other push strategies
   # such as FTP and Heroku are also available. See the documentation at
@@ -70,4 +75,7 @@ Vagrant.configure(2) do |config|
   # SHELL
   config.vm.provision :shell, path: "xampp.sh"
   config.vm.provision :shell, path: "mutillidae.sh"
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo apt-get install acpid
+  SHELL
 end
