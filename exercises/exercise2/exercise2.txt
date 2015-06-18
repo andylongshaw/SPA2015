@@ -1,5 +1,5 @@
-Exercise 2
-==========
+Exercise 2 - Access to the Operating System
+===========================================
 
 1. Having managed an exploit for the database, can we get access to the 
    operating system?  Navigate to the DNS Lookup page and use it to look up
@@ -11,4 +11,13 @@ Exercise 2
    find the current working directory of the server process?  Can you
    list its content?
 
-2. TODO - upload PHP file and inject into the web site (possibly gaining root access!)
+2. We now want to see if we can upload files to the web server host.
+   Navigate to the "File Upload" page and upload a simple text file.
+   What does the application do?  
+
+   Create a simple PHP file (we have supplied one called print-date.php
+   to get you started).  Can you upload this?  If you can upload it
+   can you get it to execute?
+
+   The file uploader puts the uploaded file in /tmp.  Can you get it
+   to put the file elsewhere?  Like in the document root for our site?
