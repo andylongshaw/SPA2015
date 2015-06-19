@@ -1,3 +1,24 @@
 Further Exercises
 =================
 
+The Mutillidae application is a rich source of vulnerabilities to try to 
+exploit.  When you have completed the other exercises, some suggestions
+for other things to try are:
+
+- Use the SQLMap application to perform an automated SQL injection attack
+  on the application.  The application is installed in the "sqlmap" directory
+  and its web site is at http://www.sqlmap.org. You will need Python 2.x
+  in order to run SQLMap.
+
+  The User Info page is a good place to start: 
+     http://ipaddr:port/index.php?page=user-info.php
+
+  Start with an SQLMap command like this:
+
+  C:> python sqlmap.py -u http://192.168.56.101:9000/index.php?page=user-info.php 
+      --dbms=mysql
+
+  Full usage instructions are in the user manual:
+     https://github.com/sqlmapproject/sqlmap/wiki/Usage
+
+- 
