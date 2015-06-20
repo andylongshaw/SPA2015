@@ -46,6 +46,11 @@ for other things to try are:
   You can download an ISO image to create a BeEF VM here:
       https://github.com/beefproject/beef/wiki/BeEF-Live-CD
 
+  This is quite an involved exercise, but if you have time, try to run BeEF in
+  another VM and see if you can use it to penetration test the client side of
+  Mutillidae.
+  
+
 
 
   
