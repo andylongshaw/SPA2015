@@ -16,9 +16,36 @@ for other things to try are:
   Start with an SQLMap command like this:
 
   C:> python sqlmap.py -u http://192.168.56.101:9000/index.php?page=user-info.php 
-      --dbms=mysql
+       --data="username=canary&user-info-php-submit-button=View+Account+Details" 
+       --dbms=MySql --tables
+
+  This will try to perform SQL injection on the "username" field and extract
+  the list of tables in each database.
+
+  Try finding more information from the database using the tool.  Try attacking
+  some of the other pages in the application.
 
   Full usage instructions are in the user manual:
      https://github.com/sqlmapproject/sqlmap/wiki/Usage
 
-- 
+- Try to subvert the Back button (the graphical one at the top left of each page)
+  to redirect the user somewhere else or run some JavaScript. This involves working
+  out how the back button's URL is populated and using that as the attack vector.
+
+- We mentioned CSRF in the Top 10 list but haven't tried to create one for Mutillidae.
+  Can you create a CSRF entrapment page to perform an action such as submitting a 
+  blog post on behalf of a logged in Mutillidae user without their permission?  
+  You can do this with a simple static HTTP page.
+
+- Continuing the same direction, but on the client side, BeEF is the Browser
+  Exploitation Framwork project and it is a pentest tool for client side
+  vulnerabilities.
+
+  BeEF is available here: http://beefproject.com/
+
+  You can download an ISO image to create a BeEF VM here:
+      https://github.com/beefproject/beef/wiki/BeEF-Live-CD
+
+
+
+  
