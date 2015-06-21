@@ -75,7 +75,5 @@ Vagrant.configure(2) do |config|
   # SHELL
   config.vm.provision :shell, path: "xampp.sh"
   config.vm.provision :shell, path: "mutillidae.sh"
-  config.vm.provision "shell", inline: <<-SHELL
-    sudo apt-get install acpid
-  SHELL
+  config.vm.provision :shell, path: "config.sh"
 end
