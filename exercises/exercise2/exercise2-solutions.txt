@@ -17,7 +17,8 @@ Exercise 2 Solutions
    If you use the URL http://...../index.php?page=/tmp/print-date.php then you'll
    find that the site blindly executes that PHP snippet.
 
-   Worse still, if you intercept the inbound request you'll find a parameter called
-   UPLOAD_DIRECTORY which you can change in BurpSuite.  If you use /var/mutillidae
-   for this parameter then the page will end up in the document root of the site.
+   Worse still, if you intercept the inbound request you'll find a parameter
+   called UPLOAD_DIRECTORY which you can change in BurpSuite.  If you use
+   /opt/lampp/htdocs/mutillidae for this parameter then the page will end up
+   in the document root of the site.
    

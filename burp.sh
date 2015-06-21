@@ -1,1 +1,0 @@
-java -jar burpsuite*.jar

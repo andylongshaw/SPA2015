@@ -4,13 +4,13 @@ Exercise 1 Solutions
 1. A few hints to get this working:
 
   * The easiest networking mode to choose is "Host network" BUT this doesn't
-    allow the server to access the Internet (or any machines not on the 
+    allow the VM to access the Internet (or any machines not on the 
     local machine).  If this is a problem then "Bridged Networking" is
     probably the easiest to use.
 
   * In BurpSuite, select "Proxy" on the top tab row and then "Options" on
-    the lower tab row.  You need a proxy on 127.0.0.1 and a free port
-    (we have used 9000 when developing the exercises).  Select the 
+    the lower tab row.  You need a proxy listener on 127.0.0.1 and a free
+    port (we have used 9000 when developing the exercises).  Select the 
     "Running" check box to enable the proxy
 
   * If you select the "Intercept" tab, then the "Intercept is on" /
@@ -44,6 +44,10 @@ Exercise 1 Solutions
     This is why the number of columns is important.  The result set of
     your malicious query needs to match the structure of the result set
     of the legitimate query.
+
+    (If it doesn’t then you get an error like “The used SELECT statements
+     have a different number of columns”. If you didn’t know the number of
+     columns then this would help you guess!)
 
     The text to enter is something like:
 

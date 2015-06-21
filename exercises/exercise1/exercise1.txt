@@ -7,6 +7,7 @@ Exercise 1 - Scouting the System
 
 2. Let's start with a very simple SQL injection attack:
    - Navigate to the "User Info" page
+     (OWASP 2013 -> A1 Injection (SQL) -> SQLi Extract Data -> User Info (SQL))
    - Register for a new account
    - Navigate back to the page and enter your username and password to 
      view your account details
@@ -23,6 +24,8 @@ Exercise 1 - Scouting the System
 4. Changing tack slightly, it would be useful to be able to read some files
    from the operating system.  Navigate to the Text File Viewer page.  Try
    viewing one of the files from the drop down list.
+
+   (OWASP 2013 -> A4 - Insecure Direct Object References -> Text File Viewer)
 
    Now can you use this page to view other files?  It seems to be pulling
    files from textfiles.com  Can it be used to read other URLs?  Can it be 
