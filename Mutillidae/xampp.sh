@@ -16,6 +16,16 @@ if [ $? -ne 0 ]; then echo "edit of xampp configuration file failed"; fi
 
 sudo /opt/lampp/lampp restart >> $INSTALL_LOG 2>&1 || echo "lampp failed to restart"
 
+# Wait for mysql to be ready?
+sleep 5
+
+/opt/lampp/bin/mysql --user=root << EOF >> $INSTALL_LOG 2>&1
+FLUSH PRIVILEGES;
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('SPA2015y');
+exit
+EOF
+if [ $? -ne 0 ]; then echo "mysql set root password failed"; fi
+
 cp /vagrant/lampp /etc/init.d
 chmod +x /etc/init.d/lampp
 update-rc.d lampp defaults

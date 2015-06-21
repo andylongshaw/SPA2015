@@ -13,8 +13,7 @@ sudo ed /etc/motd.tail << EOF >> $INSTALL_LOG 2>&1
 $
 a
 
-Your IP address is shown below:
-`ifconfig eth1 | grep 'inet addr:'` | sed 's/ *//' | cut -d ' ' -f1
+Your IP address is `ifconfig eth1 | grep 'inet addr:' | sed 's/ *//' | cut -d ' ' -f2 | cut -d ':' -f2`
 .
 wq
 EOF

@@ -12,11 +12,17 @@ sudo unzip /vagrant/LATEST-mutillidae-2.6.19.zip >> $INSTALL_LOG 2>&1 || echo "u
 
 echo "Unpacked zip file"
 
-ed mutillidae/.htaccess << EOF >> $INSTALL_LOG 2>&1
+sudo ed mutillidae/.htaccess << EOF >> $INSTALL_LOG 2>&1
 /Allow from localhost/s/^/#/
 wq
 EOF
 if [ $? -ne 0 ]; then echo "edit of htaccess file failed"; fi
+
+sudo ed mutillidae/classes/MySQLHandler.php << EOF >> $INSTALL_LOG 2>&1
+/mMySQLDatabasePassword = ""/s//mMySQLDatabasePassword = "SPA2015y"/
+wq
+EOF
+if [ $? -ne 0 ]; then echo "edit of MySQLHandler.php file failed"; fi
 
 sudo curl http://localhost/mutillidae/set-up-database.php >> $INSTALL_LOG 2>&1 || echo "curl of database setup failed"
 
