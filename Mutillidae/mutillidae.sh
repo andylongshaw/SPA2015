@@ -26,4 +26,11 @@ if [ $? -ne 0 ]; then echo "edit of MySQLHandler.php file failed"; fi
 
 sudo curl http://localhost/mutillidae/set-up-database.php >> $INSTALL_LOG 2>&1 || echo "curl of database setup failed"
 
+# Remove buggy onload handler
+sudo ed mutillidae/includes/header.php << EOF >> $INSTALL_LOG 2>&1
+/onload="onLoadOfBody(this);"/s///
+wq
+EOF
+if [ $? -ne 0 ]; then echo "edit of header.php file failed"; fi
+
 echo "Mutillidae provisioning finished" | tee -a $INSTALL_LOG
