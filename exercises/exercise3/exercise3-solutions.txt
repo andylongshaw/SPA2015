@@ -1,7 +1,7 @@
 Exercise 3 Solutions
 ====================
 
-You will probably have realised that the key to this attack is to tampler with
+You will probably have realised that the key to this attack is to tamper with
 the headers being sent to the server as they are not secured in any way.
 
 1. Navigate to the "Add to Your Blog" page and check that your username is shown
@@ -20,7 +20,8 @@ the headers being sent to the server as they are not secured in any way.
 
    The injection text you need is something like:
 
-      ' UNION select null, concat(cid, '=', username), null, null, null, null, null FROM accounts
+       ' UNION SELECT null, concat(cid, ' ', username, ' ', password), null,
+       null, null, null, null from accounts -- 
 
    Enter this into the "username" field on the User Info page and save the result.
    Use the CID value to impersonate a new user.

@@ -19,7 +19,8 @@ Exercise 1 - Scouting the System
    know the user IDs of all of the users.  We can use this later in another
    attack.  Can you extend the SQL injection attack here to display more
    data from the table.  (Hints: the table is "accounts", it has 7 columns
-   and one of the columns is called "cid")
+   and one of the columns is called "cid”, you might find the SQL UNION
+   statement useful for this)
 
 4. Changing tack slightly, it would be useful to be able to read some files
    from the operating system.  Navigate to the Text File Viewer page.  Try

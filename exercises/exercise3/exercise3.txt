@@ -13,6 +13,8 @@ the site as a user as it might alert people to our devious activities.
 1. Log into the site using your user account and navigate to the "Add to Your
    Blog" page.  Enter a new blog post.
 
+   (OWASP 2013 -> A1 Injection (SQL) -> SQLi Insert Injection -> Add to your blog)
+
 2. Switch on interception in BurpSuite and load the page again.  Inspect the
    headers.  Can you impersonate a user without logging in as them?  
    (Hint: you'll need some information from the "accounts" table we extracted
