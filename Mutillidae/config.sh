@@ -19,3 +19,4 @@ wq
 EOF
 if [ $? -ne 0 ]; then echo "edit of motd file failed"; fi
 
+sudo chown -R daemon /opt/lampp/htdocs/mutillidae >> $INSTALL_LOG 2>&1 || echo "chown of mutillidae folder failed"
