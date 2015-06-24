@@ -33,4 +33,6 @@ wq
 EOF
 if [ $? -ne 0 ]; then echo "edit of header.php file failed"; fi
 
+sudo chown -R daemon /opt/lampp/htdocs/mutillidae >> $INSTALL_LOG 2>&1 || echo "chown of mutillidae folder failed"
+
 echo "Mutillidae provisioning finished" | tee -a $INSTALL_LOG
