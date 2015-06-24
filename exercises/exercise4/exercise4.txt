@@ -22,7 +22,7 @@ blog, hoping to trap unwary users into running it.
    initially).  Wrap the form in a DIV with absolute positioning so that the 
    form appears like a window.
 
-   (Hints: to test your HTML, you can upload to Mutilidae and then get
+   (Hints: to test your HTML, you can upload to Mutillidae and then get
            the application to use it via a ".../index.php?page=/path/to/file" URL;
            If you don't want to write the HTML, you can find a workable form
            in the html-form.txt file)
@@ -61,7 +61,8 @@ blog, hoping to trap unwary users into running it.
           HTML work smoothly and put your SCRIPT tag inside the DIV where
           your FORM is for simplicity)
 
-At this point if you have data arriving at the capture-data.php page successfully you have a working proof-of-concept attack!
+At this point if you have data arriving at the capture-data.php page
+successfully you have a working proof-of-concept attack!
 
 Let's see how we could use this in a persistent XSS attack to snare an
 unwary user.

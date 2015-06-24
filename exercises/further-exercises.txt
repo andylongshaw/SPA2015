@@ -15,7 +15,7 @@ for other things to try are:
 
   Start with an SQLMap command like this:
 
-  C:> python sqlmap.py -u http://192.168.56.101:9000/index.php?page=user-info.php 
+  C:> python sqlmap.py -u http://192.168.0.45/mutillidae/index.php?page=user-info.php 
        --data="username=canary&user-info-php-submit-button=View+Account+Details" 
        --dbms=MySql --tables
 

