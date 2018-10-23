@@ -73,3 +73,11 @@ Exercise 1 Solutions
     host and display them!
 
 
+    More interestingly still, the "textfile" parameter doesn't appear to be
+    validated at all ... it will accept file paths and due to the libraries
+    the server side code is using, it will read files from the web server
+    host and display them!
+
+
+
+
